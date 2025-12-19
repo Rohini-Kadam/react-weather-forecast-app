@@ -1,0 +1,224 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Open Sans", sans-serif;
+  background: url("./Images/nature.jpg") no-repeat center center fixed;
+  background-size: cover;
+  text-align: center;
+  -webkit-text-fill-color: #eee;
+}
+
+/* MAIN LAYOUT */
+.container {
+  width: 80%;
+  height: 90vh;
+  margin: 20px auto;
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+/* LEFT PANEL */
+.left-panel {
+  flex: 1.6;
+  background: url("./Images/background.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* City Title */
+.city-title {
+  text-align: right;
+  color: #fff;
+}
+
+.city-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.city-title p {
+  font-size: 16px;
+  opacity: 0.85;
+}
+
+/* Big Weather Icon Area */
+.mb-icon {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mb-icon p {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Date + Time + Temp */
+.bottom-left {
+  color: #fff;
+  text-align: left;
+}
+
+.current-time {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+.current-date {
+  font-size: 16px;
+  opacity: 0.85;
+  margin: 6px 0 10px;
+}
+
+.temperature p {
+  font-size: 72px;
+  font-weight: bold;
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+}
+
+.temperature span {
+  font-size: 38px;
+  font-weight: 300;
+}
+
+/* RIGHT PANEL */
+.forcast {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(6px);
+  padding: 40px 25px;
+  color: #fff;
+}
+
+/* Title */
+.today-weather h3 {
+  font-size: 42px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #aaa;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Search Box */
+.search-box {
+  width: 80%;
+  margin: 12px auto 24px;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 25px;
+  padding: 6px 10px;
+}
+
+.search-bar {
+  flex: 1;
+  color: white;
+  border: none;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-bar::placeholder {
+  color: #ececec;
+}
+
+.search-bar:focus {
+  outline: none;
+}
+
+.img-box {
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+
+/* Weather List */
+.today-weather ul li {
+  width: 82%;
+  margin: 14px auto;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #666;
+  font-size: 17px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+}
+
+.today-weather ul li:last-child {
+  border-bottom: none;
+}
+
+/* FOOTER */
+.footer-info {
+  margin-top: 10px;
+  color: white;
+  font-weight: 500;
+}
+
+.footer-info a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .today-weather h3 {
+    font-size: 36px;
+  }
+  .temperature p {
+    font-size: 62px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .left-panel,
+  .forcast {
+    width: 100%;
+    height: auto;
+    padding: 25px;
+  }
+
+  .mb-icon {
+    margin: 20px auto;
+  }
+
+  .today-weather ul li {
+    width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  .temperature p {
+    font-size: 48px;
+  }
+  .current-time {
+    font-size: 26px;
+  }
+  .today-weather h3 {
+    font-size: 30px;
+  }
+  .search-box {
+    width: 95%;
+  }
+}
